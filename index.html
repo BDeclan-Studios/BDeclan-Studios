@@ -1,8 +1,11 @@
-<title>Vault Duo Support</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>BDeclan Studios — Support & Privacy</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@400;600;800&display=swap">
 <style>
-  /* Layout: one paper journal page on a desk, single column */
   :root {
     --desk: #c99b6a;
     --paper: #fbf6ea;
@@ -20,10 +23,6 @@
       --tomato: #f07a55; --mustard: #e9b949; --rule: #4a4036; color-scheme: dark;
     }
   }
-  :root[data-theme="dark"] {
-    --desk: #3a2c20; --paper: #2a2520; --ink: #f2ead9; --muted: #b8ab97;
-    --tomato: #f07a55; --mustard: #e9b949; --rule: #4a4036; color-scheme: dark;
-  }
   body {
     background: var(--desk);
     color: var(--ink);
@@ -33,6 +32,7 @@
     padding-left: max(16px, env(safe-area-inset-left, 0px));
     padding-right: max(16px, env(safe-area-inset-right, 0px));
     padding-block: 32px;
+    margin: 0;
   }
   .page {
     position: relative;
@@ -48,17 +48,24 @@
     width: 120px; height: 26px; transform: translateX(-50%) rotate(-3deg);
     background: var(--mustard); opacity: .8; border-radius: 2px;
   }
-  h1 { font-family: var(--hand); font-weight: 400; font-size: 2.6rem; line-height: 1.1; margin: 0 0 4px; text-wrap: balance; }
-  .sub { color: var(--muted); margin: 0 0 24px; }
-  nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 8px; }
-  nav a { color: var(--tomato); font-weight: 800; text-decoration: none; }
-  nav a:hover, nav a:focus-visible { text-decoration: underline; }
+  h1 { font-family: var(--hand); font-weight: 400; font-size: 2.6rem; line-height: 1.1; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 28px; }
+  .apps { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+  .app-card {
+    display: block; text-decoration: none; color: var(--ink);
+    border: 2px solid var(--rule); border-radius: 12px;
+    padding: 20px 24px; transition: border-color .15s, box-shadow .15s;
+  }
+  .app-card:hover, .app-card:focus-visible {
+    border-color: var(--tomato); box-shadow: 0 4px 12px rgba(0,0,0,.1);
+  }
+  .app-card h2 { font-family: var(--hand); font-weight: 400; font-size: 1.7rem; margin: 0 0 4px; color: var(--tomato); }
+  .app-card p { margin: 0; color: var(--muted); }
   section { border-top: 2px dashed var(--rule); padding-top: 24px; margin-top: 28px; }
-  h2 { font-family: var(--hand); font-weight: 400; font-size: 1.9rem; margin: 0 0 8px; color: var(--tomato); }
-  h3 { font-size: 1rem; font-weight: 800; margin: 18px 0 2px; }
-  p, li { max-width: 62ch; }
-  p { margin: 0 0 10px; }
+  h2.section-title { font-family: var(--hand); font-weight: 400; font-size: 1.9rem; margin: 0 0 8px; color: var(--tomato); }
+  p { margin: 0 0 10px; max-width: 62ch; }
   ul { padding-left: 20px; margin: 0 0 10px; }
+  li { max-width: 62ch; }
   .contact {
     display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
     background: color-mix(in srgb, var(--mustard) 22%, var(--paper));
@@ -71,54 +78,51 @@
   }
   button:focus-visible, a:focus-visible { outline: 3px solid var(--mustard); outline-offset: 2px; }
   .note { color: var(--muted); font-size: .9rem; }
+  .back { display: inline-block; color: var(--tomato); font-weight: 800; text-decoration: none; margin-bottom: 16px; }
+  .back:hover { text-decoration: underline; }
 </style>
+</head>
+<body>
 
 <main class="page">
   <div class="tape" aria-hidden="true"></div>
-  <h1>Vault Duo</h1>
-  <p class="sub">Heist puzzles you solve by folding your phone. Help and privacy for the iPhone app.</p>
-  <nav>
-    <a href="#support">Support</a>
-    <a href="#privacy">Privacy Policy</a>
-  </nav>
+  <h1>BDeclan Studios</h1>
+  <p class="sub">Support &amp; privacy for our apps.</p>
 
-  <section id="support">
-    <h2>Support</h2>
-    <p>Stuck on a job, found a bug, or have an idea? Email me and I'll get back to you.</p>
+  <div class="apps">
+    <a class="app-card" href="vault-duo/">
+      <h2>Vault Duo</h2>
+      <p>Heist puzzles you solve by folding your phone.</p>
+    </a>
+    <a class="app-card" href="stack-cafe/">
+      <h2>Stack Caf&eacute;</h2>
+      <p>Stack drinks to order in this cosy coffee shop game.</p>
+    </a>
+    <a class="app-card" href="game-den/">
+      <h2>Game Den</h2>
+      <p>50 games, one cosy arcade. Play solo, pass-and-play or in iMessage.</p>
+    </a>
+  </div>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>Have a question, found a bug, or want to suggest something? Email us.</p>
     <div class="contact">
       <span class="email" id="email">clubs.cosier4r@icloud.com</span>
       <button type="button" id="copy">Copy email</button>
     </div>
-    <p class="note">It helps to include your iPhone model, the job number, and a screenshot if you can.</p>
-
-    <h3>How do I play?</h3>
-    <p>Open the phone to see the puzzle page. Fold it shut to hear Mags read one clue on the cover screen. The guard closes in faster while you're folded, so remember what you heard and open up to crack the lock.</p>
-
-    <h3>I don't have an iPhone Duo.</h3>
-    <p>That's fine. On any other iPhone, hold the walkie-talkie button next to pause and Mags sends you a note without folding anything. You can turn that button off in Settings if you would rather flip the phone instead.</p>
-
-    <h3>The guard is too fast.</h3>
-    <p>Open Settings from the journal or the pause card and set Guard to Relaxed. You can also make Mags's notes stay on screen longer.</p>
-
-    <h3>Play Together won't connect.</h3>
-    <p>Both phones need Vault Duo open, Wi-Fi or Bluetooth turned on, and Local Network allowed for Vault Duo in Settings &gt; Privacy &amp; Security &gt; Local Network. Keep the phones near each other.</p>
-
-    <h3>How do I reset my progress?</h3>
-    <p>Progress is stored only on your phone. Deleting and reinstalling Vault Duo starts it fresh.</p>
   </section>
 
   <section id="privacy">
-    <h2>Privacy Policy</h2>
-    <p class="note">Last updated 14 November 2026</p>
-    <p>Vault Duo does not collect any personal data. There are no accounts, ads, analytics or tracking.</p>
+    <h2 class="section-title">Privacy</h2>
+    <p class="note">Last updated 15 November 2026</p>
+    <p>None of our apps collect personal data. There are no accounts, ads, analytics or tracking.</p>
     <ul>
-      <li><strong>Your progress and settings</strong> (stars, trophies, sound, guard speed and so on) are saved only on your device. They are never sent to me or anyone else.</li>
-      <li><strong>Play Together</strong> uses your local network to connect two nearby phones directly. Game moves pass only between those two phones and nothing is sent over the internet.</li>
-      <li><strong>Motion and hinge sensors</strong> are used only to tell whether the phone is open, folded or face down. That information never leaves the device.</li>
-      <li><strong>Emails you send</strong> for support are used only to reply to you.</li>
+      <li>All game progress and settings stay on your device.</li>
+      <li>No data is sent to us or anyone else.</li>
+      <li>Emails you send for support are used only to reply to you.</li>
     </ul>
-    <p>Vault Duo is suitable for all ages and does not knowingly collect information from children, or from anyone.</p>
-    <p>If this policy changes, the new version will be posted on this page. Questions? Email the address above.</p>
+    <p>Each app's page has its own detailed privacy policy. This policy changes only if posted here. Questions? Email the address above.</p>
   </section>
 </main>
 
@@ -134,3 +138,5 @@
     try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
   });
 </script>
+</body>
+</html>

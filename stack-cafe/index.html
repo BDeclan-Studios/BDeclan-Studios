@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Stack Caf&eacute; — Support & Privacy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@400;600;800&display=swap">
+<style>
+  :root {
+    --desk: #c99b6a; --paper: #fbf6ea; --ink: #2b2620; --muted: #6b6155;
+    --tomato: #d9532f; --mustard: #e9b949; --rule: #e6dcc6;
+    --hand: "Patrick Hand", "Comic Sans MS", "Marker Felt", cursive;
+    --body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --desk: #3a2c20; --paper: #2a2520; --ink: #f2ead9; --muted: #b8ab97;
+      --tomato: #f07a55; --mustard: #e9b949; --rule: #4a4036; color-scheme: dark;
+    }
+  }
+  body { background: var(--desk); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; padding: 32px max(16px, env(safe-area-inset-left, 0px)); margin: 0; }
+  .page { position: relative; max-width: 680px; margin: 0 auto; background: var(--paper); border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,.25); padding: 40px clamp(20px, 5vw, 48px) 48px; }
+  .tape { position: absolute; top: -12px; left: 50%; width: 120px; height: 26px; transform: translateX(-50%) rotate(-3deg); background: var(--mustard); opacity: .8; border-radius: 2px; }
+  .back { display: inline-block; color: var(--tomato); font-weight: 800; text-decoration: none; margin-bottom: 16px; }
+  .back:hover { text-decoration: underline; }
+  h1 { font-family: var(--hand); font-weight: 400; font-size: 2.6rem; line-height: 1.1; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 8px; }
+  nav a { color: var(--tomato); font-weight: 800; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  section { border-top: 2px dashed var(--rule); padding-top: 24px; margin-top: 28px; }
+  h2 { font-family: var(--hand); font-weight: 400; font-size: 1.9rem; margin: 0 0 8px; color: var(--tomato); }
+  h3 { font-size: 1rem; font-weight: 800; margin: 18px 0 2px; }
+  p, li { max-width: 62ch; }
+  p { margin: 0 0 10px; }
+  ul { padding-left: 20px; margin: 0 0 10px; }
+  .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: color-mix(in srgb, var(--mustard) 22%, var(--paper)); border-radius: 6px; padding: 12px 14px; margin: 12px 0; }
+  .email { font-weight: 800; user-select: all; word-break: break-all; }
+  button { font: inherit; font-weight: 800; color: var(--paper); background: var(--ink); border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+  button:focus-visible, a:focus-visible { outline: 3px solid var(--mustard); outline-offset: 2px; }
+  .note { color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<main class="page">
+  <div class="tape" aria-hidden="true"></div>
+  <a class="back" href="../">&larr; All Apps</a>
+  <h1>Stack Caf&eacute;</h1>
+  <p class="sub">Stack drinks to order in this cosy coffee shop game.</p>
+  <nav>
+    <a href="#support">Support</a>
+    <a href="#privacy">Privacy Policy</a>
+  </nav>
+
+  <section id="support">
+    <h2>Support</h2>
+    <p>Found a bug, have a suggestion, or need help? Email me and I'll get back to you.</p>
+    <div class="contact">
+      <span class="email" id="email">clubs.cosier4r@icloud.com</span>
+      <button type="button" id="copy">Copy email</button>
+    </div>
+    <p class="note">It helps to include your iPhone model, what day you're on, and a screenshot if you can.</p>
+
+    <h3>How do I play?</h3>
+    <p>Customers order drinks. Stack the right ingredients in the right order to fill each cup. Serve fast, keep your tips up, and unlock new menu packs and decor for your caf&eacute;.</p>
+
+    <h3>How do I unlock more drinks?</h3>
+    <p>Earn tips by serving customers well. Spend tips in the shop to buy new menu packs, each with new ingredients and drink recipes.</p>
+
+    <h3>How do I change my caf&eacute;?</h3>
+    <p>Open the shop from the hub screen. You can buy and equip decor items — wallpaper, counters, cups and more — to personalise your caf&eacute;.</p>
+
+    <h3>How do I reset my progress?</h3>
+    <p>Progress is stored only on your phone. Deleting and reinstalling Stack Caf&eacute; starts it fresh.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p class="note">Last updated 15 November 2026</p>
+    <p>Stack Caf&eacute; does not collect any personal data. There are no accounts, ads, analytics or tracking.</p>
+    <ul>
+      <li><strong>Your progress and settings</strong> (day, tips, unlocks, decor, sound and haptics preferences) are saved only on your device. They are never sent to me or anyone else.</li>
+      <li><strong>Emails you send</strong> for support are used only to reply to you.</li>
+    </ul>
+    <p>Stack Caf&eacute; is suitable for all ages and does not knowingly collect information from children, or from anyone.</p>
+    <p>If this policy changes, the new version will be posted on this page. Questions? Email the address above.</p>
+  </section>
+</main>
+
+<script>
+  document.getElementById('copy').addEventListener('click', function () {
+    var btn = this, text = document.getElementById('email').textContent;
+    function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy email'; }, 1500); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected';
+    }
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  });
+</script>
+</body>
+</html>
