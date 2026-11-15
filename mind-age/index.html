@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Mind Age — Support & Privacy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@400;600;800&display=swap">
+<style>
+  :root {
+    --desk: #c99b6a; --paper: #fbf6ea; --ink: #2b2620; --muted: #6b6155;
+    --tomato: #d9532f; --mustard: #e9b949; --rule: #e6dcc6;
+    --hand: "Patrick Hand", "Comic Sans MS", "Marker Felt", cursive;
+    --body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --desk: #3a2c20; --paper: #2a2520; --ink: #f2ead9; --muted: #b8ab97;
+      --tomato: #f07a55; --mustard: #e9b949; --rule: #4a4036; color-scheme: dark;
+    }
+  }
+  body { background: var(--desk); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; padding: 32px max(16px, env(safe-area-inset-left, 0px)); margin: 0; }
+  .page { position: relative; max-width: 680px; margin: 0 auto; background: var(--paper); border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,.25); padding: 40px clamp(20px, 5vw, 48px) 48px; }
+  .tape { position: absolute; top: -12px; left: 50%; width: 120px; height: 26px; transform: translateX(-50%) rotate(-3deg); background: var(--mustard); opacity: .8; border-radius: 2px; }
+  .back { display: inline-block; color: var(--tomato); font-weight: 800; text-decoration: none; margin-bottom: 16px; }
+  .back:hover { text-decoration: underline; }
+  h1 { font-family: var(--hand); font-weight: 400; font-size: 2.6rem; line-height: 1.1; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 8px; }
+  nav a { color: var(--tomato); font-weight: 800; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  section { border-top: 2px dashed var(--rule); padding-top: 24px; margin-top: 28px; }
+  h2 { font-family: var(--hand); font-weight: 400; font-size: 1.9rem; margin: 0 0 8px; color: var(--tomato); }
+  h3 { font-size: 1rem; font-weight: 800; margin: 18px 0 2px; }
+  p, li { max-width: 62ch; }
+  p { margin: 0 0 10px; }
+  ul { padding-left: 20px; margin: 0 0 10px; }
+  .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: color-mix(in srgb, var(--mustard) 22%, var(--paper)); border-radius: 6px; padding: 12px 14px; margin: 12px 0; }
+  .email { font-weight: 800; user-select: all; word-break: break-all; }
+  button { font: inherit; font-weight: 800; color: var(--paper); background: var(--ink); border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+  button:focus-visible, a:focus-visible { outline: 3px solid var(--mustard); outline-offset: 2px; }
+  .note { color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<main class="page">
+  <div class="tape" aria-hidden="true"></div>
+  <a class="back" href="../">&larr; All Apps</a>
+  <h1>Mind Age</h1>
+  <p class="sub">A three-minute daily brain check.</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#games">Games</a>
+    <a href="#support">Support</a>
+    <a href="#privacy">Privacy Policy</a>
+  </nav>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Mind Age is a brain-training game. Each day, take a quick Brain Check of three short tests and get your Mind Age, from 20 to 80. Then keep sharp with training games for maths, memory, speed and puzzles.</p>
+    <p>Track your Mind Age over time, collect a stamp for every day you train, and compare best scores with friends on Game Center.</p>
+    <p>Optimised for iPhone and iPhone Duo. On iPhone Duo, open your phone for a two-page notebook layout, and unfold it to reveal your Mind Age.</p>
+    <p class="note">Mind Age is a game for fun and practice. It is not a medical test and does not diagnose anything.</p>
+  </section>
+
+  <section id="games">
+    <h2>Games</h2>
+    <ul>
+      <li><strong>Calculation:</strong> Quick Maths</li>
+      <li><strong>Memory:</strong> Number Memory, Word Recall</li>
+      <li><strong>Reading &amp; Speed:</strong> Colour Clash, Flash Count, Speed Tap</li>
+      <li><strong>Puzzles:</strong> Sudoku (Easy, Medium, Hard)</li>
+    </ul>
+  </section>
+
+  <section id="support">
+    <h2>Support</h2>
+    <p>Having an issue or have an idea for a new game? Email me and I'll get back to you.</p>
+    <div class="contact">
+      <span class="email" id="email">clubs.cosier4r@icloud.com</span>
+      <button type="button" id="copy">Copy email</button>
+    </div>
+    <p class="note">It helps to include your iPhone model, which game, and a screenshot if you can.</p>
+
+    <h3>How is my Mind Age worked out?</h3>
+    <p>Each test scores how quickly and accurately you play. Your three scores are averaged and turned into an age between 20 (best) and 80.</p>
+
+    <h3>Can I do more than one Brain Check a day?</h3>
+    <p>The Brain Check is once a day, so your chart shows real day-to-day progress. You can play the training games as often as you like.</p>
+
+    <h3>How do I turn reminders or sounds on or off?</h3>
+    <p>Open Settings from the home screen. You can set a daily reminder time, and turn sounds and haptics on or off.</p>
+
+    <h3>How do I reset my progress?</h3>
+    <p>Open Settings and tap Reset all progress. Progress is stored only on your phone, so deleting the app also clears it. Game Center scores are kept by Apple.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p class="note">Last updated 16 November 2026</p>
+    <p>Mind Age does not collect, store or share any personal data.</p>
+    <ul>
+      <li>No account or sign-in required.</li>
+      <li>No analytics or tracking.</li>
+      <li>No advertising.</li>
+      <li>No data sent to any server.</li>
+      <li>Your scores, Mind Age history, and the name and age you can optionally enter stay on your device.</li>
+      <li><strong>Game Center</strong> is used only for leaderboards, managed by Apple.</li>
+      <li><strong>Daily reminders</strong> are scheduled on your phone and only if you turn them on.</li>
+      <li><strong>Emails you send</strong> for support are used only to reply to you.</li>
+    </ul>
+    <p>Mind Age is suitable for all ages and does not knowingly collect information from children, or from anyone.</p>
+    <p>If this policy changes, the new version will be posted on this page. Questions? Email the address above.</p>
+  </section>
+</main>
+
+<script>
+  document.getElementById('copy').addEventListener('click', function () {
+    var btn = this, text = document.getElementById('email').textContent;
+    function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy email'; }, 1500); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected';
+    }
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  });
+</script>
+</body>
+</html>
