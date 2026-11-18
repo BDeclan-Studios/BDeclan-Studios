@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Save Point — Support & Privacy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6;
+         padding: 40px max(16px, env(safe-area-inset-left, 0px)) 56px; -webkit-text-size-adjust: 100%; }
+  .page { position: relative; max-width: 680px; margin: 0 auto; background: var(--paper); padding: 40px clamp(20px, 5vw, 48px) 48px; }
+  .back { display: inline-block; color: var(--link); font-weight: var(--strong); text-decoration: none; margin-bottom: 16px; }
+  .back:hover, nav a:hover { text-decoration: underline; }
+  h1 { font-family: var(--display); margin: 0 0 4px; line-height: 1.1; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 8px; }
+  nav a { color: var(--link); font-weight: var(--strong); text-decoration: none; }
+  section { padding-top: 24px; margin-top: 28px; }
+  h2 { font-family: var(--display); margin: 0 0 8px; line-height: 1.2; }
+  h3 { font-size: 1rem; font-weight: var(--strong); margin: 18px 0 2px; }
+  p, li { max-width: 62ch; }
+  p { margin: 0 0 10px; }
+  ul { padding-left: 20px; margin: 0 0 10px; }
+  .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px 14px; margin: 12px 0; }
+  .email { font-weight: var(--strong); user-select: all; word-break: break-all; }
+  button { font: inherit; font-weight: var(--strong); cursor: pointer; min-height: 36px; padding: 6px 16px; }
+  button:focus-visible, a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .note { color: var(--muted); font-size: .9rem; }
+  .apps { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+  .app-card { display: block; text-decoration: none; color: var(--ink); padding: 20px 24px; }
+  .app-card h2 { margin: 0 0 4px; }
+  .app-card p { margin: 0; color: var(--muted); }
+
+  :root {
+    --bg: #E4E8EB; --paper: #F6F8F9; --raised: #FFFFFF; --ink: #1B2226; --muted: #5C6870; --line: #CDD5DA; --link: #2F5F80; --focus: #2F5F80;
+    --spine: #2A3439;
+    --display: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; --body: var(--display); --strong: 700;
+  }
+  @media (prefers-color-scheme: dark) { :root {
+    --bg: #1B2226; --paper: #2A3439; --raised: #36444B; --ink: #EEF2F4; --muted: #9AA8B0; --line: #3E4C53; --link: #8EC3E6; --focus: #8EC3E6;
+    --spine: #11171A; color-scheme: dark;
+  } }
+  .page { border-radius: 18px; overflow: hidden; padding-top: 64px; box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 10px 28px rgba(0,0,0,.10); }
+  .tape { position: absolute; top: 0; left: 0; right: 0; height: 28px; background: var(--spine);
+          background-image: linear-gradient(90deg, transparent 0 calc(100% - 96px), rgba(255,255,255,.14) calc(100% - 96px) calc(100% - 92px), transparent calc(100% - 92px)); }
+  .tape::after { content: "SAVE POINT"; position: absolute; left: 20px; top: 6px; font: 800 11px/16px var(--display); letter-spacing: 3px; color: #C9D3D9; }
+  h1 { font-size: 2.4rem; font-weight: 800; letter-spacing: -1px; }
+  h2 { font-size: 1.35rem; font-weight: 800; }
+  section { border-top: 1px solid var(--line); }
+  nav a { background: var(--raised); color: var(--ink); border-radius: 999px; padding: 4px 14px; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+  nav a:hover { text-decoration: none; color: var(--link); }
+  .contact { background: var(--raised); border: 1px solid var(--line); border-radius: 12px; }
+  button { color: var(--paper); background: var(--ink); border: 0; border-radius: 999px; }
+</style>
+</head>
+<body>
+
+<main class="page">
+  <div class="tape" aria-hidden="true"></div>
+  <a class="back" href="../">&larr; All Apps</a>
+  <h1>Save Point</h1>
+  <p class="sub">Your game library, reviews and friends in one place.</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#support">Support</a>
+    <a href="#privacy">Privacy Policy</a>
+  </nav>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Save Point keeps track of the games you own, are playing and want to play. Search for any game to add it to your library, see its details and scores, and find games that are coming soon.</p>
+    <p>Sign in with Apple to post your own reviews and see what other players think, and add friends with a friend code to see what they're playing.</p>
+  </section>
+
+  <section id="support">
+    <h2>Support</h2>
+    <p>Having an issue or have an idea? Email me and I'll get back to you.</p>
+    <div class="contact">
+      <span class="email" id="email">clubs.cosier4r@icloud.com</span>
+      <button type="button" id="copy">Copy email</button>
+    </div>
+    <p class="note">It helps to include your iPhone model, what you were doing, and a screenshot if you can.</p>
+
+    <h3>Why do I need to sign in to post a review?</h3>
+    <p>Reviews are public, so posting one needs Sign in with Apple. You can use the rest of the app without signing in.</p>
+
+    <h3>How do I report a review or a profile?</h3>
+    <p>Use the report option on the review or profile. Reports are checked, and posts that break the rules are removed.</p>
+
+    <h3>How do I stop sharing my profile?</h3>
+    <p>You can stop sharing your profile at any time. It's removed from the shared database, and friends no longer see it.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p class="note">Last updated 18 November 2026</p>
+    <p>Save Point is made by Brodie Campbell (BDStudios). There are no ads, analytics or tracking.</p>
+    <ul>
+      <li><strong>Your library</strong> stays on your device and in your own iCloud account, managed by Apple. We can't see it.</li>
+      <li><strong>Sign in with Apple</strong> is optional. We receive an anonymous ID from Apple and, the first time you sign in, your name, which is only used to suggest your display name. We don't ask for your email address.</li>
+      <li><strong>Reviews</strong> you post (your rating, review text, display name and platform) are stored in Save Point's public iCloud database, run by Apple, and can be read by every Save Point player. An ID for your iCloud account is stored with each review so we can handle reports and blocking; it is never shown. You can delete your own reviews.</li>
+      <li><strong>Your friend profile</strong> is shared only if you choose to. It can include your display name, bio, platforms, favourites, game stats, what you're playing now and a profile picture. It's stored in the same public iCloud database, and anyone with your friend code can find it. Friend requests are stored there too. Stopping sharing removes your profile.</li>
+      <li><strong>Reports</strong> you make send the reported item and your reason to our moderation queue.</li>
+      <li><strong>Game search:</strong> what you search for, and which game pages you open, are sent to Save Point's own server, which gets the results from IGDB (owned by Twitch). No personal information is sent with these searches. Game cover images load from IGDB's servers.</li>
+      <li><strong>Emails you send</strong> for support are used only to reply to you.</li>
+    </ul>
+    <p>Save Point is a general-audience app, is not directed at children under 13, and does not knowingly collect information from children.</p>
+    <p>If this policy changes, the new version will be posted on this page. Questions? Email the address above.</p>
+  </section>
+</main>
+
+<script>
+  document.getElementById('copy').addEventListener('click', function () {
+    var btn = this, text = document.getElementById('email').textContent;
+    function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy email'; }, 1500); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected';
+    }
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  });
+</script>
+</body>
+</html>
