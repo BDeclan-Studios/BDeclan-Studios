@@ -3,83 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
 <title>BDeclan Studios — Support & Privacy</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap">
 <style>
-  :root {
-    --desk: #c99b6a;
-    --paper: #fbf6ea;
-    --ink: #2b2620;
-    --muted: #6b6155;
-    --tomato: #d9532f;
-    --mustard: #e9b949;
-    --rule: #e6dcc6;
-    --hand: "Patrick Hand", "Comic Sans MS", "Marker Felt", cursive;
-    --body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --desk: #3a2c20; --paper: #2a2520; --ink: #f2ead9; --muted: #b8ab97;
-      --tomato: #f07a55; --mustard: #e9b949; --rule: #4a4036; color-scheme: dark;
-    }
-  }
-  body {
-    background: var(--desk);
-    color: var(--ink);
-    font-family: var(--body);
-    font-size: 16px;
-    line-height: 1.6;
-    padding-left: max(16px, env(safe-area-inset-left, 0px));
-    padding-right: max(16px, env(safe-area-inset-right, 0px));
-    padding-block: 32px;
-    margin: 0;
-  }
-  .page {
-    position: relative;
-    max-width: 680px;
-    margin: 0 auto;
-    background: var(--paper);
-    border-radius: 6px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.25);
-    padding: 40px clamp(20px, 5vw, 48px) 48px;
-  }
-  .tape {
-    position: absolute; top: -12px; left: 50%;
-    width: 120px; height: 26px; transform: translateX(-50%) rotate(-3deg);
-    background: var(--mustard); opacity: .8; border-radius: 2px;
-  }
-  h1 { font-family: var(--hand); font-weight: 400; font-size: 2.6rem; line-height: 1.1; margin: 0 0 4px; }
-  .sub { color: var(--muted); margin: 0 0 28px; }
-  .apps { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
-  .app-card {
-    display: block; text-decoration: none; color: var(--ink);
-    border: 2px solid var(--rule); border-radius: 12px;
-    padding: 20px 24px; transition: border-color .15s, box-shadow .15s;
-  }
-  .app-card:hover, .app-card:focus-visible {
-    border-color: var(--tomato); box-shadow: 0 4px 12px rgba(0,0,0,.1);
-  }
-  .app-card h2 { font-family: var(--hand); font-weight: 400; font-size: 1.7rem; margin: 0 0 4px; color: var(--tomato); }
-  .app-card p { margin: 0; color: var(--muted); }
-  section { border-top: 2px dashed var(--rule); padding-top: 24px; margin-top: 28px; }
-  h2.section-title { font-family: var(--hand); font-weight: 400; font-size: 1.9rem; margin: 0 0 8px; color: var(--tomato); }
-  p { margin: 0 0 10px; max-width: 62ch; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6;
+         padding: 40px max(16px, env(safe-area-inset-left, 0px)) 56px; -webkit-text-size-adjust: 100%; }
+  .page { position: relative; max-width: 680px; margin: 0 auto; background: var(--paper); padding: 40px clamp(20px, 5vw, 48px) 48px; }
+  .back { display: inline-block; color: var(--link); font-weight: var(--strong); text-decoration: none; margin-bottom: 16px; }
+  .back:hover, nav a:hover { text-decoration: underline; }
+  h1 { font-family: var(--display); margin: 0 0 4px; line-height: 1.1; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 8px; }
+  nav a { color: var(--link); font-weight: var(--strong); text-decoration: none; }
+  section { padding-top: 24px; margin-top: 28px; }
+  h2 { font-family: var(--display); margin: 0 0 8px; line-height: 1.2; }
+  h3 { font-size: 1rem; font-weight: var(--strong); margin: 18px 0 2px; }
+  p, li { max-width: 62ch; }
+  p { margin: 0 0 10px; }
   ul { padding-left: 20px; margin: 0 0 10px; }
-  li { max-width: 62ch; }
-  .contact {
-    display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
-    background: color-mix(in srgb, var(--mustard) 22%, var(--paper));
-    border-radius: 6px; padding: 12px 14px; margin: 12px 0;
-  }
-  .email { font-weight: 800; user-select: all; word-break: break-all; }
-  button {
-    font: inherit; font-weight: 800; color: var(--paper); background: var(--ink);
-    border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer;
-  }
-  button:focus-visible, a:focus-visible { outline: 3px solid var(--mustard); outline-offset: 2px; }
+  .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px 14px; margin: 12px 0; }
+  .email { font-weight: var(--strong); user-select: all; word-break: break-all; }
+  button { font: inherit; font-weight: var(--strong); cursor: pointer; min-height: 36px; padding: 6px 16px; }
+  button:focus-visible, a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
   .note { color: var(--muted); font-size: .9rem; }
-  .back { display: inline-block; color: var(--tomato); font-weight: 800; text-decoration: none; margin-bottom: 16px; }
-  .back:hover { text-decoration: underline; }
+  .apps { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+  .app-card { display: block; text-decoration: none; color: var(--ink); padding: 20px 24px; }
+  .app-card h2 { margin: 0 0 4px; }
+  .app-card p { margin: 0; color: var(--muted); }
+
+  :root {
+    --bg: #F4F4F4; --paper: #FFFFFF; --ink: #111111; --muted: #555555; --red: #E10600; --link: #C70500; --focus: #E10600;
+    --display: "Fredoka", ui-rounded, system-ui, sans-serif; --body: "Fredoka", system-ui, -apple-system, sans-serif; --strong: 600;
+  }
+  @media (prefers-color-scheme: dark) { :root {
+    --bg: #0B0B0B; --paper: #161616; --ink: #F5F5F5; --muted: #B5B5B5; --link: #FF4D45; color-scheme: dark;
+  } }
+  body { font-weight: 500; }
+  .page { border-radius: 20px; box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 12px 32px rgba(0,0,0,.08); overflow: hidden; padding-top: 52px; }
+  .tape { position: absolute; top: 0; left: 0; right: 0; height: 8px; background: var(--red); }
+  h1 { font-size: 2.6rem; font-weight: 700; letter-spacing: -.5px; }
+  h2, h2.section-title { font-size: 1.5rem; font-weight: 700; }
+  h2.section-title { color: var(--red); }
+  section { border-top: 1px solid color-mix(in srgb, var(--ink) 12%, transparent); }
+  .app-card { border: 2px solid color-mix(in srgb, var(--ink) 12%, transparent); border-radius: 16px; transition: border-color .15s, transform .15s; }
+  .app-card:hover, .app-card:focus-visible { border-color: var(--red); transform: translateY(-2px); }
+  .app-card h2 { color: var(--ink); }
+  .contact { background: color-mix(in srgb, var(--red) 8%, var(--paper)); border-radius: 12px; }
+  button { color: #FFFFFF; background: var(--red); border: 0; border-radius: 999px; }
 </style>
 </head>
 <body>
@@ -105,6 +77,10 @@
     <a class="app-card" href="mind-age/">
       <h2>Mind Age</h2>
       <p>A three-minute daily brain check and training games.</p>
+    </a>
+    <a class="app-card" href="savepoint/">
+      <h2>Save Point</h2>
+      <p>Your game library, reviews and friends in one place.</p>
     </a>
     <a class="app-card" href="cookie-bakery/">
       <h2>Cookie Bakery</h2>
