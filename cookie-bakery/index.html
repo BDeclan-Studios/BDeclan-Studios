@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Cookie Bakery — Support & Privacy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@400;600;800&display=swap">
+<style>
+  :root {
+    --desk: #c99b6a; --paper: #fbf6ea; --ink: #2b2620; --muted: #6b6155;
+    --tomato: #d9532f; --mustard: #e9b949; --rule: #e6dcc6;
+    --hand: "Patrick Hand", "Comic Sans MS", "Marker Felt", cursive;
+    --body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --desk: #3a2c20; --paper: #2a2520; --ink: #f2ead9; --muted: #b8ab97;
+      --tomato: #f07a55; --mustard: #e9b949; --rule: #4a4036; color-scheme: dark;
+    }
+  }
+  body { background: var(--desk); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; padding: 32px max(16px, env(safe-area-inset-left, 0px)); margin: 0; }
+  .page { position: relative; max-width: 680px; margin: 0 auto; background: var(--paper); border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,.25); padding: 40px clamp(20px, 5vw, 48px) 48px; }
+  .tape { position: absolute; top: -12px; left: 50%; width: 120px; height: 26px; transform: translateX(-50%) rotate(-3deg); background: var(--mustard); opacity: .8; border-radius: 2px; }
+  .back { display: inline-block; color: var(--tomato); font-weight: 800; text-decoration: none; margin-bottom: 16px; }
+  .back:hover { text-decoration: underline; }
+  h1 { font-family: var(--hand); font-weight: 400; font-size: 2.6rem; line-height: 1.1; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 8px; }
+  nav a { color: var(--tomato); font-weight: 800; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  section { border-top: 2px dashed var(--rule); padding-top: 24px; margin-top: 28px; }
+  h2 { font-family: var(--hand); font-weight: 400; font-size: 1.9rem; margin: 0 0 8px; color: var(--tomato); }
+  h3 { font-size: 1rem; font-weight: 800; margin: 18px 0 2px; }
+  p, li { max-width: 62ch; }
+  p { margin: 0 0 10px; }
+  ul { padding-left: 20px; margin: 0 0 10px; }
+  .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: color-mix(in srgb, var(--mustard) 22%, var(--paper)); border-radius: 6px; padding: 12px 14px; margin: 12px 0; }
+  .email { font-weight: 800; user-select: all; word-break: break-all; }
+  button { font: inherit; font-weight: 800; color: var(--paper); background: var(--ink); border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+  button:focus-visible, a:focus-visible { outline: 3px solid var(--mustard); outline-offset: 2px; }
+  .note { color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<main class="page">
+  <div class="tape" aria-hidden="true"></div>
+  <a class="back" href="../">&larr; All Apps</a>
+  <h1>Cookie Bakery</h1>
+  <p class="sub">Cut it, bake it, ice it, serve it.</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#pass">Bakery Pass</a>
+    <a href="#support">Support</a>
+    <a href="#privacy">Privacy Policy</a>
+  </nav>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Cookie Bakery is a cosy baking game. Read each customer's ticket, cut the cookie, bake it to just the right shade, then ice and decorate it before they lose patience.</p>
+    <p>Earn coins and chef levels to unlock cutters, doughs, sprinkles, sandwich cookies, cookie pops and bakery decor. There's also Zen Bake for relaxed decorating, a daily challenge, and Bake-off for two players on one phone.</p>
+    <p>Optimised for iPhone and iPhone Duo. On iPhone Duo, fold your phone shut to put the cookie in the oven and open it to take it out. On other iPhones, tap the Oven button.</p>
+  </section>
+
+  <section id="pass">
+    <h2>Bakery Pass</h2>
+    <p>A one-time purchase. No subscription.</p>
+    <ul>
+      <li><strong>No ads:</strong> every ad reward, like 2&times; coins at the end of the day, is yours straight away.</li>
+      <li><strong>Double coins</strong> from customers and from coin packs.</li>
+      <li><strong>+50% chef XP</strong> on every order.</li>
+      <li><strong>Exclusive items:</strong> Crown, Cat and Cloud cutters, the Gold Tray and the Gold Oven.</li>
+    </ul>
+    <p><strong>Coin packs</strong> can also be bought in the Shop. There's a free coin gift once a day too.</p>
+  </section>
+
+  <section id="support">
+    <h2>Support</h2>
+    <p>Having an issue or have an idea for a new cookie? Email me and I'll get back to you.</p>
+    <div class="contact">
+      <span class="email" id="email">clubs.cosier4r@icloud.com</span>
+      <button type="button" id="copy">Copy email</button>
+    </div>
+    <p class="note">It helps to include your iPhone model, what you were doing, and a screenshot if you can.</p>
+
+    <h3>How do I bake on a phone that doesn't fold?</h3>
+    <p>Tap the Oven button under the cookie to put it in, then Take Out when the cookie timer reaches the bake the customer asked for.</p>
+
+    <h3>My cookie caught fire!</h3>
+    <p>Leave a cookie in too long and it burns, then catches fire. Press and hold Hold to spray, or hold your finger on the flames, until the fire's out.</p>
+
+    <h3>How do I restore my Bakery Pass?</h3>
+    <p>Open Settings and tap Restore Purchases. Coin packs are used up when bought, so they can't be restored.</p>
+
+    <h3>How do I change my ad privacy choices?</h3>
+    <p>If you're in Europe, the UK or Switzerland, open Settings and tap Ad privacy. Anywhere, you can turn tracking off in your iPhone's Settings &rarr; Privacy &amp; Security &rarr; Tracking.</p>
+
+    <h3>How do I reset my progress?</h3>
+    <p>Open Settings and tap Reset all progress. This clears your coins, days and items bought with coins. Progress is stored only on your phone, so deleting the app also clears it. Your Bakery Pass comes back with Restore Purchases, and Game Center scores are kept by Apple.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p class="note">Last updated 18 November 2026</p>
+    <p>Cookie Bakery is made by Brodie Campbell (BDStudios). We don't collect any personal data ourselves. The free version shows optional ads from Google, which collects some data as described below.</p>
+    <ul>
+      <li>No account or sign-in required.</li>
+      <li>Your progress (coins, chef level, unlocked items, bakery decor, regular customers, scrapbook and settings) stays on your device. We don't run any servers.</li>
+      <li><strong>Game Center</strong> is used for leaderboards and achievements, managed by Apple.</li>
+      <li><strong>Purchases</strong> (the Bakery Pass and coin packs) are handled by Apple. We do not see your payment details.</li>
+      <li><strong>Emails you send</strong> for support are used only to reply to you.</li>
+    </ul>
+
+    <h3>Advertising</h3>
+    <p>The free version offers optional rewarded ads, for example "watch an ad for 2&times; coins". Ads only play when you choose to watch one. There are no banner or pop-up ads, and Bakery Pass holders never see ads.</p>
+    <p>Ads are provided by <strong>Google AdMob</strong>. When an ad is requested or shown, Google may collect:</p>
+    <ul>
+      <li>your device's advertising identifier, only if you allow tracking when iOS asks;</li>
+      <li>your IP address and approximate location, such as your country or city;</li>
+      <li>device and app information, such as model, iOS version and language;</li>
+      <li>how you interact with ads, and diagnostic data such as crashes and performance.</li>
+    </ul>
+    <p>Google uses this to show and measure ads, prevent fraud and, if you've agreed, personalise ads. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+
+    <h3>Your choices</h3>
+    <ul>
+      <li><strong>Tracking:</strong> if you choose "Ask App Not to Track" when iOS asks, your advertising identifier isn't shared. You can change this anytime in Settings &rarr; Privacy &amp; Security &rarr; Tracking.</li>
+      <li><strong>Europe, the UK and Switzerland:</strong> before any ads are shown, you'll be asked for consent with Google's consent form. You can change your choice later with Ad privacy in the game's Settings.</li>
+      <li><strong>No ads at all:</strong> the Bakery Pass removes ads completely.</li>
+    </ul>
+
+    <p>Cookie Bakery is a general-audience game, is not directed at children under 13, and does not knowingly collect information from children.</p>
+    <p>If this policy changes, the new version will be posted on this page. Questions? Email the address above.</p>
+  </section>
+</main>
+
+<script>
+  document.getElementById('copy').addEventListener('click', function () {
+    var btn = this, text = document.getElementById('email').textContent;
+    function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy email'; }, 1500); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected';
+    }
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  });
+</script>
+</body>
+</html>
