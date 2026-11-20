@@ -19,6 +19,15 @@ Paste these into App Store Connect: **Support URL** under App Information, and *
 
 Studio-wide contact and privacy: https://bdeclan-studios.github.io/BDeclan-Studios/
 
+## Studio home page and app-ads.txt
+
+The studio home page and `app-ads.txt` live in a separate repo, [bdeclan-studios.github.io](https://github.com/BDeclan-Studios/bdeclan-studios.github.io), because AdMob only reads `app-ads.txt` from the root of the domain:
+
+- Home page: https://bdeclan-studios.github.io/
+- app-ads.txt: https://bdeclan-studios.github.io/app-ads.txt
+
+Keep the file there; a copy in this repo would sit under `/BDeclan-Studios/` and AdMob wouldn't find it.
+
 ## Adding a new app
 
 1. Copy an existing app's folder, e.g. `mind-age/`, to a new folder named after the app (lowercase, hyphens).
