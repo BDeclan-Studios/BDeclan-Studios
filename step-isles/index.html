@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Step Isles — Support & Privacy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;800&display=swap">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6;
+         padding: 40px max(16px, env(safe-area-inset-left, 0px)) 56px; -webkit-text-size-adjust: 100%; }
+  .page { position: relative; max-width: 680px; margin: 0 auto; background: var(--paper); padding: 40px clamp(20px, 5vw, 48px) 48px; }
+  .back { display: inline-block; color: var(--link); font-weight: var(--strong); text-decoration: none; margin-bottom: 16px; }
+  .back:hover, nav a:hover { text-decoration: underline; }
+  h1 { font-family: var(--display); margin: 0 0 4px; line-height: 1.1; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 8px; }
+  nav a { color: var(--link); font-weight: var(--strong); text-decoration: none; }
+  section { padding-top: 24px; margin-top: 28px; }
+  h2 { font-family: var(--display); margin: 0 0 8px; line-height: 1.2; }
+  h3 { font-size: 1rem; font-weight: var(--strong); margin: 18px 0 2px; }
+  p, li { max-width: 62ch; }
+  p { margin: 0 0 10px; }
+  ul { padding-left: 20px; margin: 0 0 10px; }
+  .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px 14px; margin: 12px 0; }
+  .email { font-weight: var(--strong); user-select: all; word-break: break-all; }
+  button { font: inherit; font-weight: var(--strong); cursor: pointer; min-height: 36px; padding: 6px 16px; }
+  button:focus-visible, a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .note { color: var(--muted); font-size: .9rem; }
+
+  :root {
+    --bg: #3DA5A0; --desk-dark: #2C8580; --paper: #F4F9F4; --ink: #1A2E35; --muted: #4A6670; --accent: #E8A849;
+    --rule: #A8D5D0; --link: #1A6B66; --focus: #E8A849;
+    --display: "Fredoka", system-ui, -apple-system, sans-serif; --body: "Nunito", system-ui, -apple-system, sans-serif; --strong: 800;
+  }
+  @media (prefers-color-scheme: dark) { :root {
+    --bg: #1A3A38; --desk-dark: #0F2624; --paper: #1E2D2B; --ink: #E8F0EC; --muted: #9AB5AE; --rule: #2A4A46; --link: #6DD4CB; color-scheme: dark;
+  } }
+  body { background-image: linear-gradient(180deg, var(--bg), var(--desk-dark)); background-attachment: fixed; }
+  .page { border-radius: 8px; box-shadow: 0 12px 30px rgba(0,0,0,.3); border-top: 6px solid var(--accent); }
+  h1 { font-size: 2.7rem; font-weight: 700; }
+  h2 { font-size: 1.9rem; font-weight: 700; color: var(--accent); }
+  section { border-top: 2px solid var(--rule); }
+  .contact { background: color-mix(in srgb, var(--accent) 15%, var(--paper)); border-radius: 8px; }
+  button { color: var(--paper); background: var(--ink); border: 0; border-radius: 999px; }
+</style>
+</head>
+<body>
+
+<main class="page">
+  <a class="back" href="../">&larr; All Apps</a>
+  <h1>Step Isles</h1>
+  <p class="sub">Walk your way across the islands, one step at a time.</p>
+  <nav>
+    <a href="#support">Support</a>
+    <a href="#privacy">Privacy Policy</a>
+  </nav>
+
+  <section id="support">
+    <h2>Support</h2>
+    <p>Hit a snag, found a bug, or have a suggestion? Email me and I'll get back to you.</p>
+    <div class="contact">
+      <span class="email" id="email">clubs.cosier4r@icloud.com</span>
+      <button type="button" id="copy">Copy email</button>
+    </div>
+    <p class="note">It helps to include your iPhone model, iOS version, and a screenshot if you can.</p>
+
+    <h3>How do I play?</h3>
+    <p>Tap to walk across the islands, collecting steps as you go. Each island has its own challenges and secrets to discover.</p>
+
+    <h3>What are achievements?</h3>
+    <p>Step Isles has Game Center achievements you can earn by reaching milestones, exploring new islands, and connecting with friends. Check your progress in Game Center.</p>
+
+    <h3>How do I restore my purchases?</h3>
+    <p>Open Settings in the app and tap Restore Purchases. Your packs will be restored automatically.</p>
+
+    <h3>The app isn't tracking my steps.</h3>
+    <p>Make sure Step Isles has permission to access Motion &amp; Fitness data. Go to your iPhone Settings &gt; Privacy &amp; Security &gt; Motion &amp; Fitness and check that Step Isles is turned on.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p class="note">Last updated 25 November 2026</p>
+    <p>Step Isles does not collect any personal data. There are no accounts, ads, analytics or tracking.</p>
+    <ul>
+      <li><strong>Step count data</strong> is read from HealthKit on your device to power gameplay. This data is never sent to me, any server, or anyone else. It stays on your phone.</li>
+      <li><strong>Your progress and settings</strong> (islands unlocked, achievements, preferences) are saved only on your device.</li>
+      <li><strong>Game Center</strong> is used for leaderboards and achievements. Your Game Center display name and scores are handled by Apple under their own privacy policy.</li>
+      <li><strong>In-app purchases</strong> are processed by Apple. I do not receive any payment details.</li>
+      <li><strong>Emails you send</strong> for support are used only to reply to you.</li>
+    </ul>
+    <p>Step Isles is suitable for all ages and does not knowingly collect information from children, or from anyone.</p>
+    <p>If this policy changes, the new version will be posted on this page. Questions? Email the address above.</p>
+  </section>
+</main>
+
+<script>
+  document.getElementById('copy').addEventListener('click', function () {
+    var btn = this, text = document.getElementById('email').textContent;
+    function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy email'; }, 1500); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected';
+    }
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  });
+</script>
+</body>
+</html>
